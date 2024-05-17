@@ -4,6 +4,7 @@ services:
     image: verdaccio/verdaccio
     restart: always
     volumes:
-      - ./htpasswd:/verdaccio/storage/htpasswd
+      - ./verdaccio/storage:/verdaccio/storage
+      # - ./htpasswd:/verdaccio/storage/htpasswd
     ports:
       - 4873:4873
